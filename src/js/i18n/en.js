@@ -25,6 +25,29 @@ export default {
 
     settings: {
         title: 'Settings',
+        close: 'Close',
+        localization: {
+            title: 'Localization',
+            language: 'Language',
+            currency: 'Currency',
+            currencies: {
+                usd: 'USD – United States Dollar',
+                rub: 'RUB – Russian Rouble',
+                eur: 'EUR – European Union Euro',
+                krw: 'KRW – South Korean Won',
+                cny: 'CNY – Chinese Yuan',
+            },
+            languages: {
+                en: 'English',
+                ru: 'Русский'
+            }
+        },
+        appearance: {
+            title: 'Appearance',
+            light: 'Light',
+            dark: 'Dark',
+            system: 'System',
+        },
         language: {
             title: 'Language',
             en: 'English',
@@ -495,4 +518,44 @@ export default {
         invalid_address: 'This doesn\'t look like a valid address. Where\'d you get that?',
         invalid_tx: 'This doesn\'t look like a valid transaction address. Where\'d you get that?',
     },
+
+    apps: {
+        banner: {
+            title: 'Apps and services<br>of The Open Network',
+            submit_app: 'Submit app',
+            learn_more: 'Learn more'
+        },
+        categories: {
+            all: 'All',
+            all_apps: 'All apps',
+            wallets: 'Wallets',
+            exchanges: 'Exchanges',
+            marketplaces: 'Marketplaces',
+            games: 'Games',
+            staking: 'Staking',
+            social: 'Social',
+            tools: 'Tools',
+            other: 'Other',
+            dexs: 'DEXs'
+        },
+        app: {
+            open_app: 'Open app',
+            category: 'Category',
+            website: 'Website',
+            blockchain_address: 'Blockchain address',
+            similar_products: 'Similar products',
+            nothing_found: 'Nothing was found',
+            show_more: "Show more"
+        },
+        filters: {
+            popular: 'Popular',
+            top: 'Top',
+            newest: 'New'
+        },
+        search: 'Search apps and services',
+        app_card: {
+            hot: 'Hot',
+            new: 'New'
+        },
+    }
 };

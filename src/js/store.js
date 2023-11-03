@@ -110,9 +110,9 @@ export default new Vuex.Store({
         },
 
         getAddrbook({ commit }) {
-            return this._vm.$http.get(ADDRBOOK_LOCATION).then(({ data }) => {
-                commit('updateAddrbook', Object.freeze(data));
-            });
+            // return this._vm.$http.get(ADDRBOOK_LOCATION).then(({ data }) => {
+            //     commit('updateAddrbook', Object.freeze(data));
+            // });
         },
 
         getExchangeRates({ state, commit }) {

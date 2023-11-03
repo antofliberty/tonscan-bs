@@ -16,6 +16,21 @@ import { IS_TESTNET, APP_MAIN_LOCALE } from '~/config.js';
 import { formatFee, formatTons, formatFiat } from '~/helpers.js';
 import i18n from '~/i18n';
 import MediaQueriesPlugin from '~/plugins/mediaQueries.js';
+import ScreenSizePlugin from '~/plugins/screenSize.js';
+import TRow from "~/framework/TRow.vue";
+import TCol from "~/framework/TCol.vue";
+import TContainer from "~/framework/TContainer.vue";
+import TDropDown from "./framework/TDropDown.vue";
+import TChip from "~/framework/TChip.vue";
+import TSwitch from "~/framework/TSwitch.vue";
+import TBtn from "~/framework/TBtn.vue";
+import TSkeletonLoader from "~/framework/TSkeletonLoader.vue";
+import TSelector from "~/framework/TSelector.vue";
+import TDelimiter from "~/framework/TDelimiter.vue";
+import TModal from "~/framework/TModal.vue";
+import TModalCard from "~/framework/TModalCard.vue";
+import TMenu from "~/framework/TMenu.vue";
+import TMenuItem from "~/framework/TMenuItem.vue";
 
 Vue.use(VueClipboard);
 Vue.use(VueMeta, {
@@ -23,6 +38,7 @@ Vue.use(VueMeta, {
 });
 
 Vue.use(MediaQueriesPlugin)
+Vue.use(ScreenSizePlugin)
 
 Vue.component('ui-round-image', UiRoundImage);
 Vue.component('ui-copy-button', UiCopyButton);
@@ -31,6 +47,21 @@ Vue.component('ui-timeago', UiTimeago);
 Vue.component('ui-modal', UiModal);
 Vue.component('ui-fiat', UiFiat);
 Vue.component('ui-link', UiLink);
+Vue.component('t-container', TContainer);
+Vue.component('t-row', TRow);
+Vue.component('t-col', TCol);
+Vue.component('t-drop-down', TDropDown);
+Vue.component('t-chip', TChip);
+Vue.component('t-switch', TSwitch);
+Vue.component('t-btn', TBtn);
+Vue.component('t-skeleton-loader', TSkeletonLoader);
+Vue.component('t-selector', TSelector);
+Vue.component('t-delimiter', TDelimiter);
+Vue.component('t-modal', TModal);
+Vue.component('t-modal-card', TModalCard);
+Vue.component('t-menu', TMenu);
+Vue.component('t-menu-item', TMenuItem);
+
 
 Vue.prototype.$http = axios;
 Vue.prototype.$bus = new Vue();

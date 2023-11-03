@@ -25,6 +25,29 @@ export default {
 
     settings: {
         title: 'Настройки',
+        close: 'Закрыть',
+        localization: {
+            title: 'Локализация',
+            language: 'Язык',
+            currency: 'Валюта',
+            currencies: {
+                usd: 'USD – Доллар США',
+                rub: 'RUB – Российсий Рубль',
+                eur: 'EUR – Европейский Союз Евро',
+                krw: 'KRW – Южнокорейский Вон',
+                cny: 'CNY – Китайский Юань',
+            },
+            languages: {
+                en: 'English',
+                ru: 'Русский'
+            },
+        },
+        appearance: {
+            title: 'Интерфейс',
+            light: 'Светлый',
+            dark: 'Тёмный',
+            auto: 'Авто',
+        },
         language: {
             title: 'Язык',
         },
@@ -493,4 +516,44 @@ export default {
         invalid_address: 'Кажется, это некорректный адрес. Откуда вы его взяли?',
         invalid_tx: 'Кажется, вы перешли по некорректной ссылке на транзакцию. Откуда вы её взяли?',
     },
+
+    apps: {
+        banner: {
+            title: 'Приложения и Сервисы<br>The Open Network',
+            submit_app: 'Предложить',
+            learn_more: 'Узнать больше'
+        },
+        categories: {
+            all: 'Все',
+            all_apps: 'Все',
+            wallets: 'Кошельки',
+            exchanges: 'Биржи',
+            marketplaces: 'Маркетплейсы',
+            games: 'Игры',
+            staking: 'Стейкинг',
+            social: 'Социальные',
+            tools: 'Инструменты',
+            other: 'Другое',
+            dexs: 'DEX'
+        },
+        app: {
+            open_app: 'Открыть',
+            category: 'Категория',
+            website: 'Сайт',
+            blockchain_address: 'Блокчейн адрес',
+            similar_products: 'Похожие приложения',
+            nothing_found: 'Ничего не найдено',
+            show_more: "Показать еще"
+        },
+        filters: {
+            popular: 'Топ',
+            top: 'Топ',
+            newest: 'Новые'
+        },
+        search: 'Искать приложения и сервисы',
+        app_card: {
+            hot: 'Топ',
+            new: 'Новые'
+        },
+    }
 };

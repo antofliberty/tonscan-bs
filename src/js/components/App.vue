@@ -6,10 +6,14 @@
             <router-view/>
         </main>
 
-        <ui-modal align-top v-bind:isOpen.sync="settingsModalVisible">
-            <template v-slot:header>{{$t('settings.title')}}</template>
-            <ui-settings/>
-        </ui-modal>
+      <settings-bottom-sheet v-if="screenSizes.isSmallScreen" v-model="settingsBottomSheetShow"></settings-bottom-sheet>
+      <settings-modal v-else v-model="settingsModalShow"></settings-modal>
+<!--      <settings-bottom-sheet v-if="screenSizes.isSmallScreen" v-model="settingsBottomSheetShow"></settings-bottom-sheet>-->
+
+<!--        <ui-modal align-top v-bind:isOpen.sync="settingsModalVisible">-->
+<!--            <template v-slot:header>{{$t('settings.title')}}</template>-->
+<!--            <ui-settings/>-->
+<!--        </ui-modal>-->
 
         <toast-container/>
     </section>
@@ -19,17 +23,22 @@
 import ToastContainer from '~/components/UiToastContainer.vue';
 import AppHeaderBar from '~/components/AppHeaderBar.vue';
 import UiSettings from '~/components/settings/Settings.vue';
+import SettingsBottomSheet from "~/components/bottom-sheets/SettingsBottomSheet.vue";
+import SettingsModal from "~/components/settings-v2/SettingsModal.vue";
 
 export default {
+
     data() {
         return {
-            settingsModalVisible: false,
+            settingsBottomSheetShow: false,
+          settingsModalShow: false,
         };
     },
 
     created() {
         this.$bus.$on('app:open-settings-modal', () => {
-            this.settingsModalVisible = true;
+            this.settingsModalShow = true;
+            this.settingsBottomSheetShow = true;
         });
     },
 
@@ -49,6 +58,6 @@ export default {
         };
     },
 
-    components: { ToastContainer, AppHeaderBar, UiSettings },
+    components: {SettingsModal, SettingsBottomSheet, ToastContainer, AppHeaderBar, UiSettings },
 };
 </script>
