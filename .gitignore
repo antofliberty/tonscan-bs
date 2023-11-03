@@ -1,0 +1,10 @@
+node_modules
+mix-manifest.json
+package-lock.json
+.env
+.env.testnet
+dist/*
+addrbook.json
+build.zip
+.idea/
+src/fonts/
